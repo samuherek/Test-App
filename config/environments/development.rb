@@ -38,4 +38,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Some stuff from CF because of heroku
+  config.serve_static_files = true
+  config.action_dispatch.x_sendfile_header = ‘X-Accel-Redirect’
+  config.assets.compile = true
+
 end
