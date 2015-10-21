@@ -2,7 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .product-top {
-  height: 10rem;
+  height: 5rem;
+}
+.product-top h3 {
+  margin: 0.75rem 0 0 0;
+  padding-left: 0;
+}
+.product-list {
+  padding: 0;
+}
+.product {
+  position: relative;
+  margin: 2.5rem 0;
+}
+.product:hover {
+  cursor: pointer;
+}
+.product-links {
+  position: absolute;
+  right: 3rem;
+  top: 1.5rem;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.product:hover .product-links {
+  opacity: 1;
+}
+.product-title {
+  font-size: 1.4em;
+}
+.product-description {
+  height: 3.5rem;
+}
+.product-color-price {
+  height: 4rem;
+}
+.product-color {
+  line-height: 4rem;
+}
+.product-price {
+  font-weight: bold;
+  font-size: 2em;
+  float: right;
+  line-height: 4rem;
 }
