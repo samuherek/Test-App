@@ -41,7 +41,7 @@ Rails.application.configure do
 
   # Some stuff from CF because of heroku
   config.serve_static_files = true
-  config.action_dispatch.x_sendfile_header = ‘X-Accel-Redirect’
+  # config.action_dispatch.x_sendfile_header = ‘X-Accel-Redirect’
   config.assets.compile = true
 
 end
