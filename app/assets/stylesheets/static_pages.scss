@@ -2,11 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html, body {
+  height: 100%;
+}
 h1 {
   color: gray;
   font-family: Verdana, sans-serif;
 }
-
 img {
   width: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -5rem;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+footer, .page-wrap:after {
+  height: 5rem;
+}
+footer {
+  background: #222222;
+  color: white;
 }
