@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>Newapp</title>
+
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Custom stylesheet -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- JS libraries -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- Meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <h1>Jazzy Store</h1>
+  <%= yield %>
 
 </body>
 </html>
