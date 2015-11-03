@@ -1,2 +1,4 @@
 <h3>Featured Product:</h3>
-<%= @featured_product.name %>
+<% if @featured_product.present? %>
+	<%= @featured_product.name %>
+<% end %>
