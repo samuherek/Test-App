@@ -33,6 +33,14 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
+
+      <%= form_tag("/products", method: "get", class: "nvabar-form navbar-left", role: "search") do %>
+        <div class="form-group">
+          <%= text_field_tag(:q) %>
+          <%= submit_tag "Search" %>
+        </div>
+      <% end %>
+
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Products", products_path %></li>
