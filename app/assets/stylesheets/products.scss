@@ -29,6 +29,13 @@
 .product:hover .product-links {
   opacity: 1;
 }
+.product-img-box {
+  height: 20rem;
+  overflow: hidden;
+}
+.product-image {
+  height: auto;
+}
 .product-title {
   font-size: 1.4em;
 }

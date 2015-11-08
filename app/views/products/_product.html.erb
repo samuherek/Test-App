@@ -4,7 +4,9 @@
     <%= link_to 'Edit', edit_product_path(product), class: "btn btn-warning" %>
     <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
   </div>
-  <img src="<%= product.image_url %>" alt="<% product.name %>" />
+  <div class="product-img-box">
+      <img src="<%= product.image_url %>" alt="<% product.name %>" class="product-image"/>
+  </div>
   <h3 class="product-title"><%= product.name %></h3>
   <p class="product-description"><%= product.description %></p>
   <div class="product-color-price">
