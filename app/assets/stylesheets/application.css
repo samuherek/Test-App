@@ -12,4 +12,18 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+
+ .registration-btns {
+   padding-left: 3rem;
+   margin-top: 0.25rem;
+ }
+.registration-btns .btn-registration {
+  color: white;
+  background: #5E4388;
+}
+.registration-btns .btn-registration:hover {
+  color: white;
+   background: #8364B3;
+}
