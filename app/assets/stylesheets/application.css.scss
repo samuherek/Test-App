@@ -1,0 +1,178 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+@import "variables";
+
+ body {
+   background: $bodyColor;
+ }
+
+a:hover {
+  text-decoration: none;
+  background-color: none;
+}
+
+.button {
+  font-size: 0.95em;
+  border-radius: 3px;
+  background: $ligthGray;
+  padding: $smallSpacing $mediumSpacing;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &:visited {
+    color: white;
+  }
+}
+.btn-login {
+  background: $linkOnDarkBg;
+  color: $linkOnDark;
+  border: 1px solid $linkOndarkBorder;
+  &:visited {
+    color: $linkOnDark;
+  }
+  &:hover {
+    background: ligthen($linkOnDarkBg, 10%)!important;
+  }
+}
+.btn-sign-up {
+  background: $linkAccentOnDarkBg;
+  color: $linkAccentOnDark;
+  border: 1px solid $linkAccentBorder;
+  &:visited {
+    color: $linkAccentOnDark;
+  }
+}
+.registration-btns {
+  margin-top: 1.5rem;
+  .btn-login {
+    margin-right: $smallSpacing;
+  }
+}
+
+.hero {
+  background: $dark;
+  min-height: 25rem;
+  height: 55rem;
+  background-image: url('hero-bg.jpg');
+  background-position: 50%;
+  background-size: 80%;
+  background-repeat:no-repeat;
+}
+.hero-title-bg {
+  margin-top: 10rem;
+  background: $darkColor;
+  padding: $mediumSpacing;
+  border-radius: $borderRadius;
+}
+.hero-title {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 3em;
+}
+.hero-button {
+  margin-top: 5rem;
+  text-align: center;
+}
+.btn-start-browsing {
+  background: $accentColor2;
+  border: 1px solid #a5076b;
+  width: 20rem;
+  display: inline-block;
+  padding: 1.5rem 0;
+}
+
+// Navigation
+.top-bar{
+  padding: 1.75rem 0;
+  height: 8rem;
+}
+.navbar-logo {
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+.nav-logo {
+  height: 5rem;
+  &:hover .logo-title {
+    opacity: 1;
+  }
+  &:hover .navbar-logo {
+    opacity: 1;
+  }
+}
+.navbar-logo-small {
+  width: 8rem;
+  height: auto;
+}
+//  thing to work on to figure it out.
+.logo-title {
+  position: absolute;
+  top: 1.25rem;
+  left: 6rem;
+  opacity: 1;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.navbar-logo img {
+  width: 8rem;
+  height: auto;
+}
+.navbar-nav {
+  margin-top: -0.25rem;
+}
+
+.btn {
+  color: white;
+}
+
+// Featured Products
+.featured-products {
+  margin: $mediumSpacing auto;
+  .row {
+    margin: 0;
+  }
+}
+.featured-title {
+  padding-bottom: $mediumSpacing;
+}
+
+
+// Product box
+.product-box {
+  border: 1px solid $ligthGray;
+}
+.product-image {
+  height: 25rem;
+  overflow: hidden;
+  background: $ligthGray;
+  img {
+    height: 100%;
+  }
+}
+.product-details {
+  padding: 0 $smallSpacing;
+}
+.product-title {
+  font-weight: 800;
+  text-transform: uppercase;
+}

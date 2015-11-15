@@ -1,8 +1,23 @@
-<%= render "carousel" %>
+<div class="container featured-products">
+	<div class="row">
+		<h3 class="featured-title">Featured Products</h3>
+	</div>
 
-<div class="col-xs-12">
-		<ul class="list-unstyled list-inline">
-			<li><%= link_to "New Product", new_product_path %></li>
-			<li><%= link_to "Home", root_path %></li>
-		</ul>
+	<% @products.each do |product| %>
+		<div class="product-box col-sm-12 col-md-4">
+			<div class="product-image">
+				<%= image_tag(product.image_url) %>
+			</div>
+			<div class="product-details">
+				<h3 class="product-title"><%= product.name %></h3>
+			  <p class="product-description"><%= product.description %></p>
+			  <div class="product-color-price">
+			    <span class="text-muted product-color"><strong>Color:</strong> <%= product.color %></span>
+			    <span class="product-price">$<%= product.price %></span>
+			  </div>
+			</div>
+		</div>
+	<% end %>
+
+	</div>
 </div>

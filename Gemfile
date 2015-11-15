@@ -26,6 +26,12 @@ group :development, :test do
 end
 
 group :development do
+  gem 'guard'
+  gem 'guard-coffeescript'
+  gem 'guard-sass'
+  gem 'guard-less', git: 'git://github.com/guard/guard-less.git'
+  gem 'therubyracer'
+  gem 'guard-livereload'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

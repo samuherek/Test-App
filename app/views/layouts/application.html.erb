@@ -19,47 +19,32 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+<div class="hero">
+  <nav class="top-bar">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to "Bali Store", root_path, class: "navbar-brand" %>
+      <div class="pull-left nav-logo">
+        <%= link_to (root_path) do %>
+          <%= image_tag("logo.svg", class: "navbar-logo-small navbar-logo") %>
+        <% end %>
+        <!-- <span class="logo-title">Oky Shirt</span> -->
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-
-      <%= form_tag("/products", method: "get", class: "nvabar-form navbar-left", role: "search") do %>
-        <div class="form-group">
-          <%= text_field_tag(:q) %>
-          <%= submit_tag "Search", class: "btn btn-default" %>
-        </div>
-      <% end %>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav pull-right registration-btns">
-          <li>
-            <% if user_signed_in? %>
-              <%= link_to("Logout", destroy_user_session_path, :method => :delete, class: "btn btn-registration") %>
-            <% else %>
-              <%= link_to("Login", new_user_session_path, class: "btn btn-registration") %>
-            <% end %>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Products", products_path %></li>
-          <li><%= link_to "About Us", static_pages_about_path %></li>
-          <li><%= link_to "Contact", static_pages_contact_path %></li>
-          <li><%= link_to "Orders", orders_path %></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+      <div class="pull-right registration-btns">
+          <% if user_signed_in? %>
+            <%= link_to("Logout", destroy_user_session_path, :method => :delete, class: "btn-registration") %>
+          <% else %>
+            <%= link_to("Login", new_user_session_path, class: "button btn-registration btn-login") %>
+            <%= link_to("Sign Up", new_user_registration_path, class: " button btn-registration btn-sign-up") %>
+          <% end %>
+      </div>
+    </div>
   </nav>
+  <div class="hero-title-bg col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <h1 class="hero-title">Shirts for everyone</h1>
+  </div>
+  <div class="hero-button col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <%= link_to("Start Browsing", products_path, class: "button btn-start-browsing") %>
+  </div>
+</div>
 
   <% if notice %>
     <p class="alert alert-info col-xs-12 col-md-6 col-md-offset-4" role="alert"><%= notice %></p>
