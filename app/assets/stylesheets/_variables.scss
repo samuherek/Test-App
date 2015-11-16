@@ -6,7 +6,7 @@ $ligthGray: rgb(220,220,220);
 // $darkGray: ;
 
 $darkColor: #27242A;
-$bodyColor: #EBEBEB;
+$bodyColor: rgb(240,240,240);
 $accentColor: #5D4287;
 $accentColor2: #dd088f;
 
@@ -17,6 +17,11 @@ $linkAccentOnDark: #c1a5db;
 $linkAccentBorder: #8b40a8;
 $linkAccentOnDarkBg: #48305e;
 
+$textGray: rgb(100,100,100);
+
+
+// Transitions
+$quickTransition: all 0.2s ease;
 
 
 // Border radius

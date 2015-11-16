@@ -32,6 +32,8 @@ a:hover {
   background: $ligthGray;
   padding: $smallSpacing $mediumSpacing;
   text-decoration: none;
+  transition: $quickTransition;
+  border: none;
   &:hover {
     text-decoration: none;
   }
@@ -63,6 +65,64 @@ a:hover {
   .btn-login {
     margin-right: $smallSpacing;
   }
+}
+.navbar-nav {
+  margin-top: 0.25rem!important;
+  li {
+    .in-cart span {
+      color: white;
+    }
+    a {
+      color: $textGray;
+      padding: 0.75rem;
+      transition: $quickTransition;
+      &.cart-icon {
+        &:hover {
+          background: none;
+        }
+      }
+      .cart-indicator {
+        display: inline-block;
+        background: $accentColor2;
+        border-radius: 50%;
+        padding: 0.01rem 0.5rem;
+        margin-left: 0.75rem;
+        color: white;
+      }
+    }
+  }
+}
+.dropdown {
+  margin-left: $smallSpacing;
+}
+.dropdown.open .account-dropdown {
+  color: white;
+}
+.dropdown-menu {
+  border-radius: 0px;
+  font-size: 0.95em;
+  border: none;
+  box-shadow: 0 2px 30px rgba(0,0,0,0.1), 0 5px 22px rgba(0,0,0,0.1);
+  li a {
+    padding: 0.75rem 2rem;
+    color: $textGray;
+  }
+  .log-out-btn {
+    &:hover {
+      background: #DF0090;
+      color: white;
+    }
+  }
+}
+.account-dropdown {
+  border: none;
+  padding: $smallSpacing;
+  &:hover {
+    color: white;
+  }
+}
+.dropdown-menu {
+  left: -66px;
 }
 
 .hero {
@@ -108,7 +168,7 @@ a:hover {
 }
 .navbar-logo {
   opacity: 0.8;
-  transition: all 0.2s ease;
+  transition: $quickTransition;
 }
 .nav-logo {
   height: 5rem;
@@ -159,14 +219,23 @@ a:hover {
 
 // Product box
 .product-box {
+  padding: $mediumSpacing 0;
+  background: $light;
   border: 1px solid $ligthGray;
+  transition: $quickTransition;
+  &:hover {
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1), 0 5px 22px rgba(0,0,0,0.1);
+  }
 }
 .product-image {
   height: 25rem;
   overflow: hidden;
-  background: $ligthGray;
+  background: $light;
+  text-align: center;
   img {
     height: 100%;
+    width: auto;
+
   }
 }
 .product-details {
