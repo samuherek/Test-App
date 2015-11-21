@@ -1,20 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<div class="show-top-buttons">
-  <%= link_to(products_path, class: "btn btn-default") do %>
-    <i class="fa fa-chevron-left"> Back</i>
-    <% end %>
-  <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default pull-right" %>
-</div>
+  <div class="show-top-buttons">
+    <%= link_to(products_path, class: "btn btn-default") do %>
+      <i class="fa fa-chevron-left"> Back</i>
+      <% end %>
+    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default pull-right" %>
+  </div>
 
-<div class="row">
-  <div class=" col-xs-12 col-md-6">
-    <img src="<%= @product.image_url %>" alt="<%= @product.name %>" class="show-product-image" />
+  <p><span><a href="#">Home</a></span> / <span><a href="#">Category</a></span> / <span><%= @product.name %></span></p>
+
+  <div class="row">
+    <%= render "product_detail" %>
   </div>
-  <div class="col-xs-12 col-md-6">
-    <h2><%= @product.name %></h2>
-    <p><%= @product.description %></p>
-    <p><strong>Color:</strong><%= @product.color %></p>
-    <p><strong>Price:</strong><%= @product.price %></p>
+
+  <div class="row">
+    <%= render "reviews" %>
   </div>
+
 </div>

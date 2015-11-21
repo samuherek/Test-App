@@ -1,0 +1,85 @@
+.filters {
+  padding: 0;
+}
+.filter-list, .filters {
+  list-style: none;
+}
+.filter-box {
+  display: inline-block;
+}
+.filter-list li {
+  display: inline-block;
+}
+
+
+
+// General Filter styles
+
+.size-item, .color-item {
+  width: $mediumSpacing;
+  height: $mediumSpacing;
+  text-align: center;
+  border-radius: $borderRadius;
+}
+
+.filter-select {
+  border: none;  /*Removes border*/
+	border: 1px solid $ligthGray;
+  height: 3rem;
+  &:hover {
+    background-color: lighten($ligthGray, 15%);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+
+
+
+// Styles
+
+.filter-style {
+  display: inline-block;
+}
+.filter-name {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+// Colors
+
+.color-item {
+  span {
+    display: none;
+  }
+}
+.color-blue {
+  background: $blue;
+}
+.color-yellow {
+  background: $yellow;
+}
+.color-green {
+  background: $green;
+}
+.color-white {
+  background: $white;
+}
+.color-black {
+  background: $black;
+}
+
+// Sizes
+
+.filter-size {
+  padding-right: $mediumSpacing;
+}
+
+.size-item {
+  display: inline-block;
+  background: $light;
+  border: 1px solid $ligthGray;
+  padding-top: 0.25rem;
+  font-size: 0.9em;
+}

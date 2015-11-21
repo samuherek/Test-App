@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -13,11 +13,36 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"></a></li>
+    <div class="pull-right <%= "registration-btns" if !user_signed_in? %>">
+
+      <% if user_signed_in? %>
+      <ul class="nav navbar-nav">
+        <li><a href="#" class="cart-icon in-cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span class="cart-indicator">1</span></a></li>
+        <li class="dropdown">
+          <button class="button btn-login account-dropdown dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            User Name
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Settings</a></li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <%= link_to destroy_user_session_path, :method => :delete, class: "log-out-btn" do %>
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Out
+              <% end %>
+            </li>
+          </ul>
+        </li>
 
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+
+      <% else %>
+
+          <%= link_to("Login", new_user_session_path, class: "button btn-registration btn-login") %>
+          <%= link_to("Sign Up", new_user_registration_path, class: " button btn-registration btn-sign-up") %>
+
+      <% end %>
+
+    </div>
 </nav>

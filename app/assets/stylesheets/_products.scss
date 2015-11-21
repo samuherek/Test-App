@@ -1,0 +1,181 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-grid {
+  padding: 0;
+}
+
+.product-box {
+  padding: 0.5rem;
+}
+.product-box:nth-child(4n+1) {
+  padding-left: 0px;
+}
+
+.product-box:nth-child(4n+4) {
+  padding-right: 0px;
+}
+
+
+.product-grid {
+  list-style: none;
+}
+
+
+// Featured Products
+.featured-products {
+  margin: $mediumSpacing auto;
+  .row {
+    margin: 0;
+  }
+}
+.featured-title {
+  padding-bottom: $mediumSpacing;
+}
+
+
+.product-top {
+  height: 5rem;
+}
+.product-top h3 {
+  margin: 0.75rem 0 0 0;
+  padding-left: 0;
+}
+.product-list {
+  padding: 0;
+}
+.product {
+  position: relative;
+}
+.product-links {
+  position: absolute;
+  right: 3rem;
+  top: 1.5rem;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.product:hover .product-links {
+  opacity: 1;
+}
+.product-img-box {
+  height: 20rem;
+  overflow: hidden;
+}
+.product-image {
+  height: auto;
+}
+.product-title {
+  font-size: 1em;
+}
+.box-title {
+  height: 4rem;
+  margin: 1rem 0 3rem 0;
+}
+.product-color {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  z-index: 100;
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: $borderRadius;
+  border: 1px solid $ligthGray;
+}
+.product-price {
+  font-weight: bold;
+  font-size: 1.25em;
+  float: right;
+}
+
+
+// Show page styles
+
+.show-top-buttons {
+  margin-bottom: 2rem;
+}
+.show-product-image {
+  width: 100%;
+}
+
+
+
+
+
+// Product Box
+.product-wrapper {
+  height: 32rem;
+  overflow: hidden;
+  background: $light;
+  border: 1px solid $ligthGray;
+  transition: $quickTransition;
+  &:hover {
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1), 0 5px 22px rgba(0,0,0,0.1);
+  }
+  &:hover .product-image-overlay {
+    display: block;
+  }
+  &:hover .product-details {
+    margin-top: -8rem;
+  }
+}
+.product-image {
+  position: relative;
+  height: 25rem;
+  overflow: hidden;
+  background: $light;
+  text-align: center;
+  img {
+    height: 100%;
+    width: auto;
+
+  }
+}
+.product-image-overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100,100,100,0.5);
+  transition: $quickTransition;
+  z-index: 200;
+}
+
+.btn-details {
+  text-align: center;
+}
+
+.product-details {
+  position: relative;
+  padding: 0 $smallSpacing;
+  height: 20rem;
+  background: white;
+  z-index: 500;
+  transition: $quickTransition;
+}
+.product-title {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.title-product {
+  width: calc(100% - 7rem);
+  float: left;
+}
+
+.product-options {
+  text-align: center;
+}
+.product-cart {
+  height: 4rem;
+}
+.whishlist {
+  span {
+    cursor: pointer;
+    padding: 1rem;
+    color: $ligthGray;
+  }
+}

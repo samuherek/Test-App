@@ -1,0 +1,48 @@
+// Hero Section on the homepage
+
+.hero {
+  background: $dark;
+  min-height: 25rem;
+  height: 55rem;
+  background-image: url('hero-bg.jpg');
+  background-position: 50%;
+  background-size: 80%;
+  background-repeat:no-repeat;
+}
+.hero-title-bg {
+  margin-top: 10rem;
+  background: $darkColor;
+  padding: $mediumSpacing;
+  border-radius: $borderRadius;
+}
+.hero-title {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 3em;
+}
+.hero-button {
+  margin-top: 5rem;
+  text-align: center;
+}
+.btn-start-browsing {
+  background: $accentColor2;
+  border: 1px solid #a5076b;
+  width: 20rem;
+  display: inline-block;
+  padding: 1.5rem 0;
+  span {
+    transition: $quickTransition;
+    padding-left: 0.5rem;
+  }
+  &:hover {
+    background: lighten($accentColor2, 10%);
+    border-color: lighten(#a5076b, 20%);
+    span {
+      padding-left: 2rem;
+    }
+  }
+}

@@ -45,6 +45,8 @@
     <h1 class="hero-title">Shirts for everyone</h1>
   </div>
   <div class="hero-button col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-    <%= link_to("Start Browsing", products_path, class: "button btn-start-browsing") %>
+    <%= link_to products_path, class: "button btn-start-browsing" do%>
+      Show Now <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    <% end %>
   </div>
 </div>

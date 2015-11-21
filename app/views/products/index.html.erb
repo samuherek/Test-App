@@ -1,11 +1,18 @@
 <p id="notice"><%= notice %></p>
-<div class="product-top">
+<!-- <div class="product-top">
   <h3 class="col-xs-12 col-sm-6">Your Products</h3>
   <%= link_to 'New Product', new_product_path, class: "btn btn-default pull-right" %>
-</div>
+</div> -->
 
-<div class="container-fluid product-list">
+<div class="container product-list">
   <div class="row">
-    <%= render @products %>
+    <div class="col-sm-12">
+      <ul class="filters">
+        <%= render "filter" %>
+      </ul>
+      <ul class="product-grid col-sm-12">
+        <%= render @products %>
+      </ul>
+    </div>
   </div><!-- End of row -->
 </div><!-- End of fluid container -->

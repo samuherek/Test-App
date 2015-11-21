@@ -1,0 +1,22 @@
+<div class=" col-xs-12 col-md-6">
+  <img src="<%= @product.image_url %>" alt="<%= @product.name %>" class="show-product-image" />
+</div>
+<div class="col-xs-12 col-md-6">
+  <div class="product-details">
+    <h2><%= @product.name %></h2>
+    <p class="product-detail-price"><strong>Price:</strong><%= @product.price %></p>
+    <p><%= @product.description %></p>
+    <p><strong>Color:</strong><%= @product.color %></p>
+  </div>
+  <div class="product-add-to-cart">
+    <div class="input-group">
+      <input type="button" value="-" class="btn-minus">
+      <input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text" size="4">
+      <input type="button" value="+" class="btn-plus">
+    </div>
+    <button type="button" name="button" class="add-to-cart-tbn button">Add to Cart</button>
+  </div>
+  <div class="share-details">
+    <a href="#" class="button">Share</a>
+  </div>
+</div>
