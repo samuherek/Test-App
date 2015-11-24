@@ -1,7 +1,12 @@
 <li class="product-box col-xs-6 col-sm-4 col-md-3 product">
   <div class="product-wrapper">
 
-    <span class="text-muted product-color"><span class="hide"><%= product.color %></span></span>
+    <div class="product-box-colors">
+      <span class="product-color"><span class="hide"><%= product.color %></span></span>
+      <span class="product-color"><span class="hide"><%= product.color %></span></span>
+      <span class="product-color"><span class="hide"><%= product.color %></span></span>
+      <span class="product-color"><span class="hide"><%= product.color %></span></span>
+    </div>
 
     <div class="product-links">
       <%= link_to 'Show', product, class: "btn btn-default" %>
@@ -12,7 +17,10 @@
     <div class="product-image">
         <img src="<%= product.image_url %>" alt="<% product.name %>" class="product-image"/>
         <div class="product-image-overlay">
-          <%= link_to 'Show Details', product, class: "button btn-details" %>
+          <div class="whishlist">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          </div>
+          <a href="#" class="button add-to-cart-btn">Add to cart</a>
         </div>
     </div>
     <div class="product-details">
@@ -20,20 +28,20 @@
         <div class="title-product">
           <%= link_to product.name, product, class: "product-title" %>
           <div class="star-rating">
-            <span>4.5</span>
+            <span class="glyphicon glyphicon-star active"></span>
+            <span class="glyphicon glyphicon-star active"></span>
+            <span class="glyphicon glyphicon-star active"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="hide">4.5</span>
           </div>
         </div>
         <span class="product-price pull-right">
           <span class="">$<%= product.price %></span>
         </span>
       </div>
-      <div class="product-options">
-        <div class="product-cart">
-          <a href="#" class="button add-to-cart-btn">Add to cart</a>
-        </div>
-        <div class="whishlist">
-          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-        </div>
+      <div class="product-description">
+        <p class="description-text"><%= product.description %></p>
       </div>
     </div>
   </div>

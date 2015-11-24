@@ -67,18 +67,27 @@
 }
 .product-title {
   font-size: 1em;
+  color: $textColor;
+  &:hover {
+    color: lighten($textColor, 20%);
+    text-decoration: none;
+  }
 }
 .box-title {
-  height: 4rem;
-  margin: 1rem 0 3rem 0;
+  height: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
 }
-.product-color {
+.product-box-colors {
   position: absolute;
   left: 2rem;
   top: 2rem;
   z-index: 100;
-  width: 3rem;
-  height: 3rem;
+}
+.product-color {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
   background: white;
   border-radius: $borderRadius;
   border: 1px solid $ligthGray;
@@ -114,10 +123,16 @@
     box-shadow: 0 2px 30px rgba(0,0,0,0.1), 0 5px 22px rgba(0,0,0,0.1);
   }
   &:hover .product-image-overlay {
-    display: block;
+    opacity: 1;
   }
   &:hover .product-details {
-    margin-top: -8rem;
+    margin-top: -6rem;
+  }
+  &:hover .add-to-cart-btn {
+    transform: scale(1);
+  }
+  &:hover .product-description {
+    border-top: 1px solid $borderColor;
   }
 }
 .product-image {
@@ -133,20 +148,32 @@
   }
 }
 .product-image-overlay {
-  display: none;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
   background: rgba(100,100,100,0.5);
   transition: $quickTransition;
   z-index: 200;
 }
 
-.btn-details {
-  text-align: center;
+.add-to-cart-btn {
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  width: 13rem;
+  color: white;
+  background: $accentColor2;
+  transform: scale(1.1);
+  transition: $quickTransition;
+  &:hover {
+    color: white;
+    background: lighten($accentColor2, 5%);
+  }
 }
+
 
 .product-details {
   position: relative;
@@ -159,20 +186,34 @@
 .product-title {
   font-weight: 800;
   text-transform: uppercase;
+
 }
 
 .title-product {
   width: calc(100% - 7rem);
   float: left;
 }
-
-.product-options {
-  text-align: center;
+.star-rating {
+  .glyphicon {
+    color: $ligthGray;
+  }
+  .active {
+    color: $starColor;
+  }
+}
+.product-description {
+  padding-top: 1rem;
+}
+.description-text {
+  font-size: 0.8em;
+  line-height: 1.5em;
 }
 .product-cart {
   height: 4rem;
 }
 .whishlist {
+  position: absolute;
+  right: 0;
   span {
     cursor: pointer;
     padding: 1rem;
