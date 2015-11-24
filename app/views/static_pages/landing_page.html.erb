@@ -3,21 +3,59 @@
 		<h3 class="featured-title">Featured Products</h3>
 	</div>
 
-	<% @products.each do |product| %>
-		<div class="product-box col-sm-12 col-md-4">
-			<div class="product-image">
-				<%= image_tag(product.image_url) %>
-			</div>
-			<div class="product-details">
-				<h3 class="product-title"><%= product.name %></h3>
-			  <p class="product-description"><%= product.description %></p>
-			  <div class="product-color-price">
-			    <span class="text-muted product-color"><strong>Color:</strong> <%= product.color %></span>
-			    <span class="product-price">$<%= product.price %></span>
-			  </div>
-			</div>
-		</div>
-	<% end %>
+	<ul class="product-grid products-featured col-sm-12">
+		<% @products.each do |product| %>
 
-	</div>
+			<li class="product-box col-xs-6 col-sm-4 col-md-3 product">
+			  <div class="product-wrapper">
+
+			    <div class="product-box-colors">
+			      <span class="product-color color-blue"><span class="hide"><%= product.color %></span></span>
+			      <span class="product-color color-yellow"><span class="hide"><%= product.color %></span></span>
+			      <span class="product-color color-green"><span class="hide"><%= product.color %></span></span>
+			      <span class="product-color color-red"><span class="hide"><%= product.color %></span></span>
+			    </div>
+
+			    <div class="product-links">
+			      <%= link_to 'Show', product, class: "btn btn-default" %>
+			      <%= link_to 'Edit', edit_product_path(product), class: "btn btn-warning" %>
+			      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+			    </div>
+
+			    <div class="product-image">
+			        <img src="<%= product.image_url %>" alt="<% product.name %>" class="product-image"/>
+			        <div class="product-image-overlay">
+			          <div class="whishlist">
+			            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+			          </div>
+			          <a href="#" class="button add-to-cart-btn">Add to cart</a>
+			        </div>
+			    </div>
+			    <div class="product-details">
+			      <div class="box-title">
+			        <div class="title-product">
+			          <%= link_to product.name, product, class: "product-title" %>
+			          <div class="star-rating">
+			            <span class="glyphicon glyphicon-star active"></span>
+			            <span class="glyphicon glyphicon-star active"></span>
+			            <span class="glyphicon glyphicon-star active"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="glyphicon glyphicon-star"></span>
+			            <span class="hide">4.5</span>
+			          </div>
+			        </div>
+			        <span class="product-price pull-right">
+			          <span class="">$<%= product.price %></span>
+			        </span>
+			      </div>
+			      <div class="product-description">
+			        <p class="description-text"><%= product.description %></p>
+			      </div>
+			    </div>
+			  </div>
+			</li>
+
+		<% end %>
+	</ul>
+
 </div>

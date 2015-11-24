@@ -91,7 +91,6 @@
   height: 1.5rem;
   background: white;
   border-radius: $borderRadius;
-  border: 1px solid $ligthGray;
 }
 .product-price {
   font-weight: bold;
@@ -155,7 +154,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  background: rgba(100,100,100,0.5);
+  background: rgba(39,36,42,0.5);
   transition: $quickTransition;
   z-index: 200;
 }
@@ -225,4 +224,9 @@
   &:hover span {
     color: lighten($ligthGray, 10%);
   }
+}
+
+
+.products-featured {
+  margin-top: 0;
 }
