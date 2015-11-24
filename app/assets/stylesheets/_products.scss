@@ -4,6 +4,7 @@
 
 .product-grid {
   padding: 0;
+  margin-top: 10rem;
 }
 
 .product-box {
@@ -218,5 +219,10 @@
     cursor: pointer;
     padding: 1rem;
     color: $ligthGray;
+    font-size: 1.4em;
+    transition: $quickTransition;
+  }
+  &:hover span {
+    color: lighten($ligthGray, 10%);
   }
 }

@@ -1,11 +1,17 @@
 .filters {
   padding: 0;
+  height: 5rem;
 }
 .filter-list, .filters {
   list-style: none;
+  display: inline-block;
+}
+.filter-list {
+  padding: 0;
 }
 .filter-box {
   display: inline-block;
+  line-height: 7rem;
 }
 .filter-list li {
   display: inline-block;
@@ -15,19 +21,31 @@
 
 // General Filter styles
 
+
 .size-item, .color-item {
-  width: $mediumSpacing;
-  height: $mediumSpacing;
   text-align: center;
   border-radius: $borderRadius;
 }
+.color-item {
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-right: 0.25rem;
+}
+
 
 .filter-select {
   border: none;  /*Removes border*/
-	border: 1px solid $ligthGray;
-  height: 3rem;
+  height: 4rem;
+  background: $fieldOnDark;
+  color: $light;
+  min-width: 15rem;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  option {
+    padding-left: 0.5rem;
+  }
   &:hover {
-    background-color: lighten($ligthGray, 15%);
+    background-color: lighten($fieldOnDark, 5%);
   }
   &:focus {
     outline: none;
@@ -43,43 +61,83 @@
   display: inline-block;
 }
 .filter-name {
-  font-size: 0.9em;
-  font-weight: bold;
+  font-size: 1em;
+  color: darken($light, 50%);
+  padding-right: 1.35rem;
 }
 
 // Colors
 
+.filter-color {
+  margin-top: 0.55rem;
+}
+
 .color-item {
+  cursor: pointer;
   span {
     display: none;
   }
 }
 .color-blue {
   background: $blue;
+  border: 1px solid transparent;
+  &:hover {
+    background: lighten($blue, 5%);
+    border: 1px solid darken($blue, 5%);
+  }
 }
 .color-yellow {
   background: $yellow;
+    border: 1px solid transparent;
+  &:hover {
+    background: lighten($yellow, 10%);
+  }
 }
 .color-green {
   background: $green;
+  &:hover {
+    background: lighten($green, 5%);
+  }
 }
 .color-white {
   background: $white;
+  &:hover {
+    background: darken($white, 10%);
+  }
 }
 .color-black {
   background: $black;
+  &:hover {
+    background: lighten($black, 15%);
+  }
+}
+.color-gray {
+  background: $gray;
+  &:hover {
+    background: lighten($gray, 5%);
+  }
+}
+.color-red {
+  background: $red;
+  &:hover {
+    background: lighten($red, 10%);
+  }
 }
 
 // Sizes
 
-.filter-size {
-  padding-right: $mediumSpacing;
-}
 
 .size-item {
+  height: 4rem;
+  width: 4rem;
+  color: $light;
   display: inline-block;
-  background: $light;
-  border: 1px solid $ligthGray;
-  padding-top: 0.25rem;
-  font-size: 0.9em;
+  background: $fieldOnDark;
+  font-size: 0.75em;
+  line-height: 4rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  &:hover {
+    background: lighten($fieldOnDark, 5%);
+  }
 }

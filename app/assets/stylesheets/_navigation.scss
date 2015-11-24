@@ -19,7 +19,7 @@
   &:hover .logo-title {
     opacity: 1;
   }
-  &:hover .navbar-logo {
+  &:hovera .navbar-logo {
     opacity: 1;
   }
 }
@@ -107,6 +107,8 @@
 .account-dropdown {
   border: none;
   padding: $smallSpacing;
+  background: none;
+  color: $ligthGray;
   &:hover {
     color: white;
   }
