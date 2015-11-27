@@ -21,10 +21,12 @@
 
   <% if current_page?(root_path) %>
       <%= render 'layouts/home_header' %>
-  <% elsif current_page?(products_path)%>
+  <% elsif current_page?(products_path) %>
       <%= render 'layouts/browse_header' %>
+  <% elsif current_page?(products_path) %>
+      <%= render 'layouts/product_header' %>
   <% else %>
-      <%= render 'layouts/products_header' %>
+      <%= render 'layouts/general_header' %>
   <% end %>
 
   <% if notice %>
