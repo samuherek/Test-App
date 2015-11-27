@@ -11,6 +11,10 @@
 
         <% if user_signed_in? %>
         <ul class="nav navbar-nav">
+          <li><%= link_to("Home", root_path, class: "link") %></li>
+          <li><%= link_to("Browse All", products_path, class: "link") %></li>
+          <li><%= link_to("Support", new_user_session_path, class: "link") %></li>
+          <li> | </li>
           <li><a href="#" class="cart-icon in-cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span><span class="cart-indicator">1</span></a></li>
           <li class="dropdown">
             <button class="button btn-login account-dropdown dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

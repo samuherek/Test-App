@@ -1,0 +1,118 @@
+// Top Navigation
+
+
+
+//  Navigation for Homepage
+
+.top-bar{
+  padding: 1.75rem 0;
+  height: 8rem;
+}
+
+.navbar-logo {
+  opacity: 0.8;
+  transition: $quickTransition;
+}
+
+.nav-logo {
+  height: 5rem;
+  &:hover .logo-title {
+    opacity: 1;
+  }
+  &:hovera .navbar-logo {
+    opacity: 1;
+  }
+}
+
+.navbar-logo-small {
+  width: 8rem;
+  height: auto;
+}
+
+//  thing to work on to figure it out.
+.logo-title {
+  position: absolute;
+  top: 1.25rem;
+  left: 6rem;
+  opacity: 1;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.navbar-logo img {
+  width: 8rem;
+  height: auto;
+}
+
+.navbar-nav {
+  margin-top: -0.25rem;
+}
+
+.registration-btns {
+  margin-top: 1.5rem;
+  .btn-login {
+    margin-right: $smallSpacing;
+  }
+}
+
+.navbar-nav {
+  margin-top: 0.25rem!important;
+  li {
+    .in-cart span {
+      color: white;
+    }
+    a {
+      color: $textGray;
+      padding: 0.75rem;
+      transition: $quickTransition;
+      &.cart-icon {
+        &:hover {
+          background: none;
+        }
+      }
+      .cart-indicator {
+        display: inline-block;
+        background: $accentColor2;
+        border-radius: 50%;
+        padding: 0.01rem 0.5rem;
+        margin-left: 0.75rem;
+        color: white;
+      }
+    }
+  }
+}
+
+.dropdown {
+  margin-left: $smallSpacing;
+}
+.dropdown.open .account-dropdown {
+  color: white;
+}
+.dropdown-menu {
+  border-radius: 0px;
+  font-size: 0.95em;
+  border: none;
+  box-shadow: 0 2px 30px rgba(0,0,0,0.1), 0 5px 22px rgba(0,0,0,0.1);
+  li a {
+    padding: 0.75rem 2rem;
+    color: $textGray;
+  }
+  .log-out-btn {
+    &:hover {
+      background: #DF0090;
+      color: white;
+    }
+  }
+}
+.account-dropdown {
+  border: none;
+  padding: $smallSpacing;
+  background: none;
+  color: $ligthGray;
+  &:hover {
+    color: white;
+  }
+}
+.dropdown-menu {
+  left: -66px;
+}

@@ -20,9 +20,11 @@
 <body>
 
   <% if current_page?(root_path) %>
-      <%= render 'layouts/hero' %>
+      <%= render 'layouts/home_header' %>
+  <% elsif current_page?(products_path)%>
+      <%= render 'layouts/browse_header' %>
   <% else %>
-      <%= render 'layouts/header' %>
+      <%= render 'layouts/products_header' %>
   <% end %>
 
   <% if notice %>
