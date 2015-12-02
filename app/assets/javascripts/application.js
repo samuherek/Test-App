@@ -18,3 +18,8 @@
 $(document).ready(function() {
   $(".alert").delay(3000).fadeOut(600);
 });
+
+
+$(document).on('ready page:load', function(){
+    $('.rating').raty({ path: '/assets' });
+});
