@@ -16,6 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'cancancan', '~> 1.10'
 gem 'devise'
 gem "font-awesome-rails"
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
 
 
 group :development, :test do

@@ -11,5 +11,8 @@
         <%= render @products %>
       </ul>
     </div>
+    <div class="pagination">
+      <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    </div>
   </div><!-- End of row -->
 </div><!-- End of fluid container -->
