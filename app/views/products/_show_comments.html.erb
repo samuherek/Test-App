@@ -8,6 +8,11 @@
       <div class="rating"></div>
       <p><%= comment.body %></p>
     </div>
+    <% if signed_in? && current_user.admin? %>
+      <% if can? :update, comment  %>
+        <%= link_to "Delete", product_comment_path(@product, comment), method: :delete, data: { confirm: "Are you sure?"} %>
+      <% end %>
+    <% end %>
   <%end %>
   <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
 </div>
