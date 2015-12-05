@@ -36,7 +36,12 @@
         </ul>
 
         <% else %>
-
+          <ul class="nav navbar-nav">
+            <li><%= link_to("Home", root_path, class: "link") %></li>
+            <li><%= link_to("Browse All", products_path, class: "link") %></li>
+            <li><%= link_to("Support", static_pages_contact_path, class: "link") %></li>
+          </ul>
+          
             <%= link_to("Login", new_user_session_path, class: "button btn-registration btn-login") %>
             <%= link_to("Sign Up", new_user_registration_path, class: " button btn-registration btn-sign-up") %>
 
