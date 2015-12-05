@@ -36,12 +36,13 @@
         </ul>
 
         <% else %>
+
           <ul class="nav navbar-nav">
             <li><%= link_to("Home", root_path, class: "link") %></li>
             <li><%= link_to("Browse All", products_path, class: "link") %></li>
             <li><%= link_to("Support", static_pages_contact_path, class: "link") %></li>
           </ul>
-          
+
             <%= link_to("Login", new_user_session_path, class: "button btn-registration btn-login") %>
             <%= link_to("Sign Up", new_user_registration_path, class: " button btn-registration btn-sign-up") %>
 
@@ -53,10 +54,11 @@
 
   <div class="hero-header">
     <h3 class="hero-title">Filter your best tshirt right now</h3>
-    <form class="search-box" action="#" method="post">
-      <input class="search-input form-control" type="text" placeholder="Search...">
-      <button class="search-button" type="submit"><span class="search-icon glyphicon glyphicon-search"></span></button>
-    </form>
+    <%= form_tag("/products", method: "get", class: "search-box") do %>
+      <%= label_tag(:q, "Search for:", class: "hidden") %>
+      <%= text_field_tag :q, params[:q], class: "search-input form-control", placeholder: "Search..." %>
+      <%= submit_tag "Search", class: "search-button"%>
+    <% end %>
   </div>
 
   <div class="filter-section">
