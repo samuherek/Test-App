@@ -1,5 +1,5 @@
 <div class=" col-xs-12 col-md-6 product-image-box">
-  <img src="<%= @product.image_url %>" alt="<%= @product.name %>" class="show-product-image" />
+  <img src="<%= @product.image_url %>" alt="<%= @product.name %>" class="show-product-image image-zoom" data-zoom-image="<%= @product.image_url %>"/>
   <ul class="product-images-small">
     <li class="product-images-list"><img src="<%= @product.image_url %>" alt="<%= @product.name %>" class="product-image-small image-active" /></li>
     <li class="product-images-list"><img src="<%= @product.image_url %>" alt="<%= @product.name %>" class="product-image-small" /></li>
